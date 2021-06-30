@@ -1,0 +1,23 @@
+{
+  "name": "yoti_techtest",
+  "version": "1.0.0",
+  "description": "technical integration test for Yoti",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "mime": "^2.5.2",
+    "yoti": "3.15.0"
+  },
+  "devDependencies": {
+    "@getyoti/sdk-sandbox": "1.6.0"
+  }
+}

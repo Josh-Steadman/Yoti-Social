@@ -1,0 +1,171 @@
+.table-top{
+    width: 50%;
+}
+
+body {
+    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif; 
+    color:#0c0c44;
+}
+
+#heading{
+    text-align: center;
+}
+
+.dash-btn {
+    float: right;
+}
+
+#runs{
+    margin-bottom: 30px;
+    width: 150px;
+}
+
+.signIn{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.message{
+    width: 400px;
+    text-align: center;
+}
+
+
+
+  
+
+ 
+  
+  
+
+
+
+.input{
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 10px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+
+#InfoContainer {
+    max-width: 800px;
+    margin: 8% auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+#signupContainer {
+    max-width: 600px;
+    margin: 8% auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    
+  }
+
+.blue-btn{ 
+ background-color: #0c0c44;
+ color: white;
+}
+
+.blue-btn:hover{
+    color: white;
+    opacity: 0.8;
+}
+
+  h2 {
+     
+     text-align: center;
+     font-family: Corbel, "Lucida Grande";
+     color: #0c0c44;
+  }
+
+  h5 {
+      font-family: Corbel;
+  }
+
+  h6 {
+    margin-bottom: 30px;
+    font-family: Corbel;
+    text-align: center;
+}
+
+.btn-blue{
+    background-color: #3abcfc;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+  .home-body{
+      background-color: white;
+  }
+
+p {
+    text-align: center;
+}  
+
+
+
+
+.logInForm{
+    margin-top: 50px;
+}
+
+.searchForm {
+    margin: auto;
+}
+
+
+
+.image{
+    text-align: center;
+}
+
+.homeHeader{
+    margin-bottom: 5px;
+}
+
+
+
+h3 {
+    flex: 1;
+    font-family: Corbel;
+}
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
