@@ -186,7 +186,7 @@ app.get('/index', (req,res) => {
         console.log(sessionId);
         console.log(clientSessionToken)
         req.session.YotiId = sessionId
-        console.log(req.session.YotiId)
+        
         sandboxClient.configureSessionResponse(sessionId, responseConfig);
         // Send user to sandbox indentification page 
         res.statusCode = 302;
@@ -211,9 +211,9 @@ app.get('/home',  async (req,res) => {
     // get Yoti_session_id to retrieve data and image 
     console.log(req.session.YotiId)
     
-    docScanClient.getSession(req.session.YotiId).then( async session => {
+    
+    const session = await docScanClient.getSession(req.session.YotiId)
         
-        console.log('js')
         const resources = session.getResources();
 
     // Returns a collection of ID Documents
@@ -247,39 +247,22 @@ app.get('/home',  async (req,res) => {
         
     })
    
-      
-       await docScanClient.getMediaContent(req.session.YotiId, docId).then((media) => {
+      // do const media = await docScanClient
+       const media = await docScanClient.getMediaContent(req.session.YotiId, docId)
             const content = media.getContent();
             const buffer = content.toBuffer();
             const jsonData = JSON.parse(buffer);
             // handle jsonData here
             console.log(jsonData)
             data = jsonData
-        }).catch(error => {
-            // handle error
-            console.log(error)
-        })
+        
 
-      await docScanClient.getMediaContent(req.session.YotiId, pageMediaIds[0]).then((media) => {
-        const content = media.getContent();
-        const buffer = content.toBuffer();
-       
-        console.log(content)
+      const mediaImage = await docScanClient.getMediaContent(req.session.YotiId, pageMediaIds[0])
         
-        fs.writeFileSync("public/images/image.jpg", buffer);  
-        
-    }).catch(error => {
-        console.log(error)
-        // handle error
-    })
+        const base64Content = mediaImage.getBase64Content();        
+      
+      res.render('index', {'data': data, 'image': base64Content} ) 
     
-        
-    }).catch(error => {
-        console.log(error)
-    }).then(async() => {
-        
-        await res.render('index', {'data': data} ) 
-    })
     
 })
 
